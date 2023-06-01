@@ -828,7 +828,7 @@
     <input class="input--style-1" type="email" placeholder="email" name="email">
     </div>
     <div class="input-group">
-    <input class="input--style-1" type="password" placeholder="mot de passe" name="password">
+    <input class="input--style-1" type="password" placeholder="mot de passe" name="password" >
     </div>
     <div class="p-t-20">
          <button class="btn btn--radius btn--green" type="submit">S'authentifier</button>

@@ -133,7 +133,6 @@ span {
 
 <div class="main">
 <section class="signup">
-
 <div class="container">
 <div class="signup-content">
 <form method="POST" id="signup-form" class="signup-form" action="{{route('createtu')}}">
