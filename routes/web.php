@@ -20,3 +20,9 @@ Route::get('affichetu', [Etudiantcontroller::class, 'affichetu'])->name('affiche
 Route::post('cherchetu', [Etudiantcontroller::class, 'cherchetu'])->name('cherchetu');
 Route::get('searchetu', function(){return view("searchetu");})->name('searchetu');
 
+// action sur etudiant
+Route::get('editer/{id}', [Etudiantcontroller::class, 'vedit'])->name('editetu');
+Route::put('vedit', [Etudiantcontroller::class, 'editer'])->name('vedit');
+Route::get('showupdateetu', function(){return view("succesEditetu");})->name('show_update_etu');
+
+

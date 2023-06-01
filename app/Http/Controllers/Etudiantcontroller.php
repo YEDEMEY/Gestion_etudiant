@@ -58,4 +58,30 @@ class Etudiantcontroller extends Controller
 
 
    }
+
+   public function vedit($id){
+      $etudiant = Etudiant::find($id);
+     return view('editeretu', ['etudiant'=>$etudiant]);
+   }
+
+
+   public function editer(Request $request){
+        $request-> validate([
+            'id'=> 'required',
+            'nom'=> 'required',
+            'prenom'=> 'required',
+            'email'=> 'required ',
+        ]);
+
+        $etudiant = Etudiant::findOrFail($request->id);
+       
+        $etudiant->nom = $request->input('nom');
+        $etudiant->prenom = $request->input('prenom');
+        $etudiant->email = $request->input('email');
+
+        $etudiant-> save();
+
+        return redirect()->route('show_update_etu');
+        // return redirect()->route('editetu', $request->id)->with('message','Modifier avec succes');
+   }
 }

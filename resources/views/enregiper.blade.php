@@ -121,7 +121,7 @@ span {
     <a href="{{route('ajoutetu')}}">Save Etu</a>
     <a href="{{route('affichetu')}}">Show Etu</a>
     <a href="{{route('searchetu')}}">SearchEtu</a>
-    <a href="#">Contact</a>
+    <a href="#"> Contact</a>
     <div class="animation start-home"></div>
 </nav>
 

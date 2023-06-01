@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="css/affichetu1.css">
 
     <meta name="robots" content="noindex, follow">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+ 
     <script>
         (function(w, d) {
             ! function(a, b, c, d) {
@@ -103,6 +105,7 @@
             background-color: #34495e;
             border-radius: 8px;
             font-size: 0;
+            
         }
 
         nav a {
@@ -238,6 +241,7 @@
                                 <th class="cell100 column2">Nom</th>
                                 <th class="cell100 column3">Prénom</th>
                                 <th class="cell100 column4">Email</th>
+                                <th class="cell100 column4 col-sm-15">Action</th>
                             </tr>
                         </thead>
                     </table>
@@ -251,6 +255,12 @@
                                 <td class="cell100 column2">{{ $etudiants->nom }}</td>
                                 <td class="cell100 column3">{{ $etudiants->prenom }}</td>
                                 <td class="cell100 column4">{{ $etudiants->email }}</td>
+                                <td class="cell100 column5">
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <a type="button" class="btn btn-outline-success" href="{{route('editetu', $etudiants->id)}}">Editer</a>
+                                        <a type="button" class="btn btn-outline-danger" href="#">Supprimer</a>
+                                    </div>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -294,6 +304,8 @@
 
     <script src="js/affichetu.js"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7cd5565cde7e776e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ 
 </body>
 
 </html>
