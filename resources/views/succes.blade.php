@@ -139,10 +139,21 @@ span {
     </nav>
       <div class="card">
       <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-        <i class="checkmark">✓</i>
+        <i class="checkmark">✓</i> 
       </div>
-        <h1>Success</h1> 
-        <p>Etudiant enrégistré</p>
+
+          @if(session('success'))
+            <h1>Success</h1> 
+            <p>Element modifié</p>
+          @endif  
+          @if(session('successy')) 
+            <h1>Success</h1> 
+            <p>Element enregistré </p>
+          @endif 
+        
+            <h1>Success</h1> 
+            <p>Element supprimé </p>
+      
       </div>
     </body>
 </html>
