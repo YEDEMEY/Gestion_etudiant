@@ -149,10 +149,10 @@ span {
           @if(session('successy')) 
             <h1>Success</h1> 
             <p>Element enregistré </p>
-          @endif 
-        
+          @else  
             <h1>Success</h1> 
             <p>Element supprimé </p>
+          @endif 
       
       </div>
     </body>

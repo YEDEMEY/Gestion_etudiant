@@ -259,6 +259,7 @@
                                     <div class="d-grid gap-2 d-md-block">
                                         <a type="button" class="btn btn-outline-success" href="{{route('editetu', $etudiants->id)}}">Editer</a>
                                         <a type="button" class="btn btn-outline-danger" href="{{route('deletu', $etudiants->id)}}">Supprimer</a>
+                                        <a type="button" class="btn btn-outline-danger" href="#">...</a>
                                     </div>
                                 </td>
                             </tr>
