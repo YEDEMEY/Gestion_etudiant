@@ -140,12 +140,15 @@ span {
 
     <div class="form-group">
     <input type="text" class="form-input" name="nom" id="name" placeholder="Nom" />
-    </div>
-    <div class="form-group">
-    <input type="text" class="form-input" name="prenom" id="prenom" placeholder="Prénom" />
-    </div>
-    <div class="form-group">
-    <input type="email" class="form-input" name="email" id="email" placeholder="Email" />
+	</div>
+	<div class="form-group">
+		<input type="text" class="form-input" name="prenom" id="prenom" placeholder="Prénom" />
+	</div>
+	<div class="form-group">
+	<input type="email" class="form-input" name="email" id="email" placeholder="Email" value="{{ old('email') }}" />
+						@error('email')
+						<div class="alert alert-danger">{{ $message }}</div>
+						@enderror
     </div>
     <div class="form-group">
     <input type="password" class="form-input" name="password" id="password" placeholder="Password" />
