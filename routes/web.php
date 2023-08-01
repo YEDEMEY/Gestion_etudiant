@@ -22,6 +22,7 @@ Route::get('searchetu', function(){return view("searchetu");})->name('searchetu'
 
 // action sur etudiant
 Route::get('editer/{id}', [Etudiantcontroller::class, 'vedit'])->name('editetu');
+Route::get('affichetu/{id}', [Etudiantcontroller::class, 'deletEtu'])->name('deletu');//route vers la fonction qui supprime un l'element indiqué
 Route::put('vedit', [Etudiantcontroller::class, 'editer'])->name('vedit');
 Route::get('showupdateetu', function(){return view("succesEditetu");})->name('show_update_etu');
 
